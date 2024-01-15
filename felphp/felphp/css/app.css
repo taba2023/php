@@ -1,0 +1,463 @@
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+body {
+    width: 100%;
+    height: auto;
+    background: #ffa500;
+    font-size: 1.3em;
+    
+}
+header {
+    position: relative;
+    width: 100%;
+    min-height: 400px;
+    background: url('../assets/images/po.jpg');
+    background-size: cover;
+    background-position: center;
+    
+}
+
+
+#toast {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #00ff00;
+    color: #fff;
+    text-align: center;
+    border-radius: 16px;
+    padding: 16px;
+    position: fixed;
+    z-index: 13;
+    left: 50%;
+    top: 30px;
+    font-size: 1.1em;
+}
+    #login {
+        width: 400px;
+        height: 100px;
+        position: absolute;
+        z-index: 3;
+        top: 100px;
+        right: 15px;
+        text-align: right;
+    }
+       .logButton {
+                background: #00ffff;
+                color: #000;
+                border-radius: 4px;
+                padding: 2px 7px;
+                font-size: 1em;
+                font-family: 'Rajdhani', sans-serif;
+                font-weight: 700;
+                cursor: pointer;
+        }
+        #login > form > input {
+            font-weight: 600;
+            font-size: 1em;
+            margin: 1px;
+        }
+        #signupLink {
+            font-size: 1em;
+            border-radius: 4px;
+            padding: 2px 7px;
+            color: #c0c0c0;
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: 600;
+        }
+       
+        
+    #cart {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin-top: 40px;
+        position: absolute;
+        background: url('../assets/icons/cartIcon.png');
+        background-size: cover;
+        background-position: center;
+        z-index: 3;
+        top: -15px;
+        left: 65px;
+        text-align: center;
+        cursor: pointer;
+    }
+    #cartLink {
+        width: 30px;
+        font-size: 1em;
+        font-weight: 500;
+        color: #ddd;
+        right: -8px;
+        margin-top: 35px;
+        transform: translateX(-32px);
+        position: absolute;
+        font-family: 'Geologica', sans-serif;
+        background-color: #ff0000;
+        border-radius: 50%;
+        text-shadow: 1px 1px #000000;
+        border: 3px solid #000;
+       
+      
+        }
+    #logo {
+       width: 400px;
+       height: 400px;
+       position: absolute;
+       background: url('../assets/images/logo.png');
+       background-size: cover;
+       background-position: center;
+       text-align: center;
+       z-index: 3;
+       top: 50%;
+       margin-top: -180px;
+       left: 50%;
+       transform: translate(-50%, -50%);
+       
+        
+    }
+    #social {
+        width: 400px;
+        height: 70px;
+        position: absolute;
+        z-index: 3;
+        top: 15px;
+        right: 15px;
+        margin-bottom: 15px;
+        text-align: right;
+    }
+        .socialIcon {
+            width: 55px;
+            margin: 10px;
+        }
+nav {
+    width: 100%;
+    height: 80px;
+    background: #c0c0c0;
+    text-align: left;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+}
+    a {
+        text-decoration: none;
+        color: #c0c0c0;
+        font-size: 2.5em;
+        font-weight: 700;
+        font-family: 'Rajdhani', sans-serif;
+        
+        margin: 0 13px;
+    }
+    a:hover {
+        color: #52b7ff;
+    }
+
+    .navStyle{
+        background-color: #000;
+        
+       
+
+    }
+main {
+    width: 100%;
+    height: 900px;
+    background: #fff;
+    padding: 50px;
+}
+    .catIcon {
+        width: 256px;
+        background: #ff00ff;
+        border-radius: 16px;
+        border: 3px solid #555;
+        box-shadow: 2px 2px 5px #333;
+        margin: 0 10px;
+        margin-top: 50px;
+    }
+
+/*================*/   
+/* Product Styles */
+.productCard {
+    width: 246px;
+    height: 500px;
+    background: #000;
+    border-radius: 16px;
+    box-shadow: 2px 2px 5px #555;
+    padding: 10px;
+    color: #fff;
+    font-family: 'Rajdhani', sans-serif;
+    float: left;
+    margin: 10px 15px;
+    position: relative;
+    
+    
+}
+    .productImages {
+        width: 225px;
+        height: 225px;
+        margin: 0 auto;
+        border-top-left-radius: 16px;
+        border-bottom-left-radius: 16px;
+    }
+    .productInfo {
+        width: 246px;
+        padding: 15px 15px 0 15px;
+    }
+    .productInfo > h2 {
+        color: #fff;
+        margin-bottom: 10px;
+    }
+    .productInfo > form > button {
+        background: #ffa500;
+        color: #000;
+        width: 75%;
+        text-align: center;
+        position: absolute;
+        bottom: 10px;
+        left: 13%;
+        padding: 5px 0;
+        border-bottom-left-radius: 14px;
+        border-bottom-right-radius: 14px;
+        border-top-left-radius: 14px;
+        border-top-right-radius: 14px;
+        cursor: pointer;
+        font-weight: 700;
+        
+    }
+    .productQty {
+        font-size: 1.2em;
+        font-weight: 600;
+        position: absolute;
+        bottom: 45px;
+        right: 15px;
+        text-align: center;
+        max-width: 45px;
+        background-color: #ffd700;
+        border-bottom-left-radius: 14px;
+        border-bottom-right-radius: 14px;
+        border-top-left-radius: 14px;
+        border-top-right-radius: 14px;
+    }
+    .proDescp {
+        font-size: 0.8em;
+        font-weight: 700;
+    }
+/* Sign-up Styles */
+#signup {
+    text-align: center;
+    width: 40%;
+    margin: 25px auto;
+    padding: 50px;
+    background: transparent;
+    border-radius: 16px;
+}
+    #signup > form {
+        font-size: 1.2em;
+        font-weight: 700;
+    }
+    #signup > form > input {
+        font-size: 1.2em;
+        margin-bottom: 2px;
+        background: transparent;
+        min-width: 400px;
+        color: #fff;
+    }
+    #signup > form > button {
+        min-width: 400px;
+        background: #c0c0c0;
+    }
+    
+
+
+    #welcomeMessage {
+        font-size: 1.4em;
+        color: #4d7efa;
+        font-family: 'Rajdhani', sans-serif;
+        text-shadow: 1px 1px 2px #00f;
+    } 
+    
+    .singupBack {
+
+          background: url('../assets/images/sg.png');
+          background-size: cover;
+          background-position: center;
+    }
+
+    .signH1 {
+        color: #c0c0c0;
+        font-family: 'Rajdhani', sans-serif;
+    }
+
+
+/* CHECKOUT STYLES */
+.itemListing {
+    font-weight: 100;
+    font-size: 1.3em; 
+    
+    
+}
+#checkout {
+    width: 600px;
+    margin: 0 auto;
+    background: #000;
+    border: 3px solid #fff;
+    border-radius: 8px;
+
+}
+.thumb {
+    width: 96px;
+    border-radius: 8px;
+    margin-right: 10px;
+}    
+
+.checkoutStyle{
+    background: url('../assets/images/cartb.png');
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 900;
+    color: #fff;
+    
+}
+
+/* contact from */
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin-top: -250px;
+    color: #c0c0c0;
+    font-weight: bold;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 2em;
+    }
+
+label {
+    margin-bottom: 10px;
+}
+
+
+input {
+    margin-bottom: 20px;
+    padding: 5px;
+    width: 200px;
+}
+
+
+button {
+    padding: 10px 20px;
+    background-color: #c0c0c0;
+    color:#000;
+
+}
+
+
+.imageMain {
+    background: url('../assets/images/pc.png');
+    background-size: cover;
+    background-position: center;
+}
+
+   .h1Style {
+    text-align: center;
+    color: #c0c0c0;
+    text-shadow: 2px 2px 7px  #ffa500;
+    font-size: 4em;
+    font-family: 'Rajdhani', sans-serif;
+    animation-name: changeColor;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    }
+
+    @keyframes changeColor {
+      0% {
+      color: green;
+         }
+      50% {
+    color: yellow;
+    }
+    100% {
+    color: red;
+         }
+   }
+
+
+
+
+
+/* about */
+
+.containerAbout {
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.containerAbout .text {
+    flex: 1;
+    margin-right: 20px;
+    text-align: center;
+    transform: translateY(-20px);
+}
+
+.containerAbout .image {
+    flex: 1;
+    text-align: center;
+    transform: translateY(-20px);
+}
+
+.containerAbout img {
+     width: 700px;
+     height: 500px;
+}
+
+.colorMain {
+    background: url('../assets/images/cir.png');
+}
+
+.aboutPa{
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: bold;
+    font-family: 'Rajdhani', sans-serif;
+}
+.h1About {
+    text-align: center;
+    color: #c0c0c0;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 4em;
+}
+
+/* products background */
+
+.backProducts{
+    background: url('../assets/images/prod2.png');
+    background-size: cover;
+    background-position: center;
+}
+
+
+/*===== home backgound===*/
+
+.homeBack{
+    background: url('../assets/images/home1.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.h1homeStyle {
+    color: #c0c0c0;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 4em;
+
+}
+
+/*====== thanks =====*/
+
+.thanks {
+    color: #c0c0c0;
+    font-family: 'Rajdhani', sans-serif;
+}
